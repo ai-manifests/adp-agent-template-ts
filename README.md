@@ -14,7 +14,7 @@ npm install
 
 # 2. Generate a bearer token and an Ed25519 keypair
 export ADP_BEARER_TOKEN=$(openssl rand -hex 32)
-node -e "import('adp-agent').then(m => m.generateKeyPair().then(k => console.log(\`ADP_PRIVATE_KEY=\${k.privateKey}\nADP_PUBLIC_KEY=\${k.publicKey}\`)))"
+node -e "import('@ai-manifests/adp-agent').then(m => m.generateKeyPair().then(k => console.log(\`ADP_PRIVATE_KEY=\${k.privateKey}\nADP_PUBLIC_KEY=\${k.publicKey}\`)))"
 # copy the output into your shell environment
 
 # 3. Run locally
@@ -90,7 +90,7 @@ For production, swap the default JSONL journal for SQLite:
 
 ```ts
 // In src/index.ts:
-import { SqliteJournal } from 'adp-agent/journal-sqlite';
+import { SqliteJournal } from '@ai-manifests/adp-agent/journal-sqlite';
 const journal = new SqliteJournal('/var/lib/adp/journal.db');
 const agent = new AdpAgent(config, { journal });
 ```

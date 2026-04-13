@@ -12,7 +12,7 @@
 
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { AdpAgent, JsonlJournal, type AgentConfig } from 'adp-agent';
+import { AdpAgent, JsonlJournal, type AgentConfig } from '@ai-manifests/adp-agent';
 
 const configPath = process.argv.find((_, i, a) => a[i - 1] === '--config') || process.argv[2];
 if (!configPath) {
@@ -42,7 +42,7 @@ if (process.env.ADP_PRIVATE_KEY) {
 // this, so the anchor is strictly optional.
 //
 // if (process.env.ADP_ANCHOR_ENABLED === 'true') {
-//   const { createAnchorStore, CalibrationAnchorScheduler } = await import('adp-agent-anchor');
+//   const { createAnchorStore, CalibrationAnchorScheduler } = await import('@ai-manifests/adp-agent-anchor');
 //   const store = createAnchorStore({
 //     enabled: true,
 //     target: (process.env.ADP_ANCHOR_TARGET as any) ?? 'mock',

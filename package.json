@@ -12,11 +12,11 @@
   },
   "license": "CC0-1.0",
   "dependencies": {
-    "adp-agent": "file:../adp-agent/packages/agent",
+    "@ai-manifests/adp-agent": "^0.1.0",
     "express": "^4.21.0"
   },
   "optionalDependencies": {
-    "adp-agent-anchor": "file:../adp-agent/packages/agent-anchor",
+    "@ai-manifests/adp-agent-anchor": "^0.1.0",
     "better-sqlite3": "^12.8.0"
   },
   "devDependencies": {

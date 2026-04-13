@@ -1,6 +1,6 @@
 {
   "agentId": "did:adp:my-agent-v1",
-  "port": 3000,
+  "port": 6199,
   "domain": "my-agent.example.com",
 
   "decisionClasses": ["code.correctness"],

@@ -35,7 +35,7 @@
  * The example below is a static stub — it always approves. Replace it.
  */
 
-import type { EvaluationResult } from 'adp-agent';
+import type { EvaluationResult } from '@ai-manifests/adp-agent';
 
 export async function evaluate(action: {
   kind: string;
