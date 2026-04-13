@@ -1,0 +1,30 @@
+# Local development. `docker compose up` builds and runs your agent on
+# port 3000. The `./journal` host mount persists journal data across
+# container restarts, which matters for calibration continuity.
+#
+# For production, replace this with your own orchestrator (Kubernetes,
+# systemd, Nomad, etc.) — this compose file is for local iteration only.
+
+services:
+  agent:
+    build: .
+    container_name: my-adp-agent
+    restart: unless-stopped
+
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - ./journal:/var/lib/adp/journal
+
+    environment:
+      # Secrets that should NOT be in the config file. Generate fresh ones
+      # before your first run:
+      #
+      #   ADP_BEARER_TOKEN=$(openssl rand -hex 32)
+      #   Use `adp-agent`'s generateKeyPair() for ADP_PRIVATE_KEY + ADP_PUBLIC_KEY
+      #
+      ADP_BEARER_TOKEN: ${ADP_BEARER_TOKEN:-replace-me}
+      ADP_PRIVATE_KEY: ${ADP_PRIVATE_KEY:-}
+      ADP_PUBLIC_KEY: ${ADP_PUBLIC_KEY:-}
+      NODE_ENV: production

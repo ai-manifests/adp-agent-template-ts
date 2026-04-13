@@ -1,0 +1,32 @@
+{
+  "agentId": "did:adp:my-agent-v1",
+  "port": 3000,
+  "domain": "my-agent.example.com",
+
+  "decisionClasses": ["code.correctness"],
+  "authorities": {
+    "code.correctness": 0.7
+  },
+
+  "stakeMagnitude": "medium",
+  "defaultVote": "approve",
+  "defaultConfidence": 0.65,
+
+  "dissentConditions": [
+    "if the proposed action touches a module I have no test coverage on",
+    "if the proposed action would change a public API contract"
+  ],
+
+  "falsificationResponses": {},
+
+  "journalDir": "journals/my-agent",
+
+  "evaluator": {
+    "kind": "shell",
+    "command": "./scripts/evaluate.sh",
+    "timeoutMs": 60000,
+    "parseOutput": "exit-code"
+  },
+
+  "peers": []
+}

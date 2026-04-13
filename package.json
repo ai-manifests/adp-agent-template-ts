@@ -1,0 +1,30 @@
+{
+  "name": "my-adp-agent",
+  "version": "0.1.0",
+  "description": "ADP agent built on the adp-agent reference implementation. Fork this template, edit agent.config.json and src/evaluator.ts, and you have a federation-ready agent.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "agent": "tsx src/index.ts --config agents/example.json",
+    "build": "tsc",
+    "start": "node dist/src/index.js --config agents/example.json",
+    "test": "vitest run"
+  },
+  "license": "CC0-1.0",
+  "dependencies": {
+    "adp-agent": "file:../adp-agent/packages/agent",
+    "express": "^4.21.0"
+  },
+  "optionalDependencies": {
+    "adp-agent-anchor": "file:../adp-agent/packages/agent-anchor",
+    "better-sqlite3": "^12.8.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  }
+}
