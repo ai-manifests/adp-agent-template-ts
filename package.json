@@ -2,6 +2,7 @@
   "name": "my-adp-agent",
   "version": "0.1.0",
   "description": "ADP agent built on the adp-agent reference implementation. Fork this template, edit agent.config.json and src/evaluator.ts, and you have a federation-ready agent.",
+  "author": "David H. Friedel Jr. — MarketAlly",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,13 +11,13 @@
     "start": "node dist/src/index.js --config agents/example.json",
     "test": "vitest run"
   },
-  "license": "CC0-1.0",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@ai-manifests/adp-agent": "^0.2.0",
+    "@ai-manifests/adp-agent": "^0.3.0",
     "express": "^4.21.0"
   },
   "optionalDependencies": {
-    "@ai-manifests/adp-agent-anchor": "^0.2.0",
+    "@ai-manifests/adp-agent-anchor": "^0.3.0",
     "better-sqlite3": "^12.8.0"
   },
   "devDependencies": {

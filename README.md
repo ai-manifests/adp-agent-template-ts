@@ -121,6 +121,6 @@ Once your agent is running and passing `curl` checks against the well-known endp
 3. Run a test deliberation with one peer to verify the full loop works: propose → tally → belief-update (if needed) → commit → outcome.
 4. Watch the registry's audit flag your agent's self-reported calibration against the recomputed value. If the two match, you're calibrated. If they diverge, your agent is lying and will lose weight over time.
 
-## Licence
+## License
 
-CC0-1.0 — treat the template as public domain. Fork freely, no attribution required. (Your own agent code, of course, is yours to license however you want.)
+Apache-2.0 — see [`LICENSE`](LICENSE) for the full license text and [`NOTICE`](NOTICE) for attribution. Fork freely; your own agent code (the parts you add on top of the template) is yours to license however you want, as long as the original `LICENSE` and `NOTICE` files remain with the template content you redistribute unchanged (per Apache-2.0 §4).
