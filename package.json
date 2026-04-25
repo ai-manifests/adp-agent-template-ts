@@ -2,7 +2,7 @@
   "name": "my-adp-agent",
   "version": "0.1.0",
   "description": "ADP agent built on the adp-agent reference implementation. Fork this template, edit agent.config.json and src/evaluator.ts, and you have a federation-ready agent.",
-  "author": "David H. Friedel Jr. — MarketAlly",
+  "author": "David H. Friedel Jr. — MarketAlly Pte Ltd",
   "type": "module",
   "private": true,
   "scripts": {
