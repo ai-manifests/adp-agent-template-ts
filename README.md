@@ -1,6 +1,6 @@
 # my-adp-agent
 
-An ADP-compliant agent built on the [adp-agent](https://git.marketally.com/ai-manifests/adp-agent) reference implementation. Fork this template, edit two files, and you have a federation-ready agent.
+An ADP-compliant agent built on the [adp-agent](https://github.com/ai-manifests/adp-agent) reference implementation. Fork this template, edit two files, and you have a federation-ready agent.
 
 ## What ADP is (one paragraph)
 
@@ -109,7 +109,7 @@ Produces a small non-root image, persists the journal on a volume, and exposes t
 
 This template intentionally doesn't ship a CI/CD workflow — the deployment pattern depends entirely on where you're hosting. See:
 
-- [Proxmox LXC pattern](https://git.marketally.com/ai-manifests/adp-federation-prototype) — how the reference federation on CT 128 deploys via Gitea Actions + SSH + systemd
+- [Proxmox LXC pattern](https://github.com/ai-manifests/adp-federation-prototype) — how the reference federation on CT 128 deploys via Gitea Actions + SSH + systemd
 - The `Dockerfile` here — works with any container platform (Kubernetes, Nomad, Fly.io, Render, your own Docker host)
 
 ## What comes next
